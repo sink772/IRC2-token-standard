@@ -1,4 +1,4 @@
-# ICON Token Standard (IRC2) Reference Implementation
+# Reference Implementation of ICON Token Standard (IRC2)
 
 ## Overview
 
@@ -7,10 +7,9 @@
 ## Deployment
 
 ```bash
-$ tbears start
-$ tbears deploy mySampleToken -c sampletoken.json
+$ tbears deploy -k <your_key> -c sampletoken.json mySampleToken
 ```
 
 ## Reference
 
-* [ICON Token Standard (draft)](https://github.com/icon-project/IIPs/blob/master/IIPS/iip-2.md)
+* [ICON Token Standard](https://github.com/icon-project/IIPs/blob/master/IIPS/iip-2.md)

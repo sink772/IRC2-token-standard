@@ -1,32 +1,30 @@
-import abc
-
 from iconservice import *
 
 TAG = 'mySampleToken'
 
 
-class TokenStandard(abc.ABC):
-    @abc.abstractmethod
+class TokenStandard(ABC):
+    @abstractmethod
     def name(self) -> str:
         pass
 
-    @abc.abstractmethod
+    @abstractmethod
     def symbol(self) -> str:
         pass
 
-    @abc.abstractmethod
+    @abstractmethod
     def decimals(self) -> int:
         pass
 
-    @abc.abstractmethod
+    @abstractmethod
     def totalSupply(self) -> int:
         pass
 
-    @abc.abstractmethod
+    @abstractmethod
     def balanceOf(self, _owner: Address) -> int:
         pass
 
-    @abc.abstractmethod
+    @abstractmethod
     def transfer(self, _to: Address, _value: int, _data: bytes=None):
         pass
 

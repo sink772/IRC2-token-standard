@@ -6,7 +6,7 @@
     "to": "cx0000000000000000000000000000000000000000",
     "stepLimit": "0x300000",
     "deploy": {
-        "contentType": "tbears",
+        "contentType": "zip",
         "mode": "install",
         "scoreParams": {
             "initialSupply": "0x3e8",
