@@ -1,4 +1,4 @@
-# Reference Implementation of ICON Token Standard (IRC2)
+# ICON Token Standard (IRC2) Reference Implementation
 
 ## Overview
 
@@ -7,7 +7,7 @@
 ## Deployment
 
 ```bash
-$ tbears deploy -k <your_key> -c sampletoken.json mySampleToken
+$ tbears deploy -k <keystore_file> -c deploy.json mySampleToken
 ```
 
 ## Reference
