@@ -29,7 +29,7 @@ class TokenStandard(ABC):
         pass
 
 
-class CrowdSaleInterface(InterfaceScore):
+class TokenFallbackInterface(InterfaceScore):
     @interface
     def tokenFallback(self, _from: Address, _value: int, _data: bytes):
         pass
@@ -92,12 +92,12 @@ class MySampleToken(IconScoreBase, TokenStandard):
 
     def _transfer(self, _from: Address, _to: Address, _value: int, _data: bytes):
         if self._balances[_from] < _value:
-            self.revert("Out of balance")
+            revert("Out of balance")
 
         self._balances[_from] = self._balances[_from] - _value
         self._balances[_to] = self._balances[_to] + _value
         if _to.is_contract:
-            crowdsale_score = self.create_interface_score(_to, CrowdSaleInterface)
-            crowdsale_score.tokenFallback(_from, _value, _data)
+            recipient_score = self.create_interface_score(_to, TokenFallbackInterface)
+            recipient_score.tokenFallback(_from, _value, _data)
         self.Transfer(_from, _to, _value, _data)
         Logger.debug(f'Transfer({_from}, {_to}, {_value}, {_data})', TAG)
