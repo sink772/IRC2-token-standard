@@ -1,8 +1,12 @@
+> **NOTE: This repository is deprecated and no longer maintained.**
+>
+> Please see the official IRC2 token sample: https://github.com/icon-project/samples/tree/master/irc2_token
+
 # ICON Token Standard (IRC2) Reference Implementation
 
 ## Overview
 
-* Provide a simple and solid reference implementation for ICON token starndard (IRC2)
+* Provide a simple and solid reference implementation for ICON token standard (IRC2)
 
 ## Deployment
 
